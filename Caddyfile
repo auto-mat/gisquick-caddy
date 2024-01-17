@@ -38,6 +38,13 @@
     }
   }
 
+  reverse_proxy /feed/* {$MNK_GISQUICK_RSS_FEED_SERVER_ADDR} {
+    import proxy_headers
+    transport http {
+      dial_timeout 15s
+    }
+  }
+
   rewrite / /map/
 
   # client side routing
