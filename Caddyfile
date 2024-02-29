@@ -45,6 +45,9 @@
     }
   }
 
+  @search query "PROJECT=automat/ cyklistesobe"
+  redir @search /?PROJECT=automat/cyklistesobe&utm_source=cyklonoviny&utm_medium=QR&utm_campaign=clanek
+
   rewrite / /map/
 
   # client side routing
